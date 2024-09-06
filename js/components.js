@@ -13,5 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('footer-container').innerHTML = data;
         })
         .catch(error => console.error('Error loading header:', error));
+        
+        fetch('contact_form.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('contact-form-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
 });
 
